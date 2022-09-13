@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>原型模式</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var LoopImages = function(imgArr,container){
+				this.imagesArray = imgArr;//轮播图片数组
+				this.container = container;//轮播图片容器
+			}
+			LoopImages.prototype = {
+				//创建轮播图片
+				createImage:function(){
+					
+				},
+				//切换下一张图片
+				changeImage:function(){
+					
+				}
+			}
+			//上下滑动切换类
+			var SlideLoopImg = function(imgArr,container){
+				LoopImages.call(this,imgArr,container);
+			}
+			SlideLoopImg.prototype = new LoopImages();
+			//重写继承的切换图片方法
+			SlideLoopImg.prototype.changeImage = function(){
+				
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>单例模式</title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		//创建自己的小型代码库 提供一个命名空间
+		var A = {
+			Util:{
+				method:function(){},
+			},
+			Tool:{
+				tool_method:function(){},
+				tool_other:function(){}
+			}
+		}
+		//无法修改的静态变量
+		var Conf = (function(){
+			//私有变量
+			var conf {
+				MAX_NUM:100,
+				MIN_NUM:1
+			}
+			return {
+				get:function(name){
+					return conf[name] ? conf[name] :null;
+				}
+			}
+		})();
+	</script>
+</html>
